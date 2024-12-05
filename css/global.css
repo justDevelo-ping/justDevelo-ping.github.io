@@ -1,0 +1,177 @@
+@import url(reset.css); /* Import the meyer's CSS reset with my modification */
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 1.25rem; /* En REM */
+  font-weight: 400; /* 400 = regular, 500 = medium, 700 = bold*/
+  font-style: normal;
+  line-height: 1.5; /* Chiffre multiplicateur (Line-height pt / font-size pt) */
+  color: #555555;
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1;
+  color: #010101;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #222222;
+  position: relative;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 940px; /* Change the px for the number need to avid going ultrawide */
+  margin: 0 auto; /* Make sure the whole container is in the center */
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-header {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-navbar {
+  gap: 1.8rem;
+}
+
+.flex-main {
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-footer {
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0;
+  align-items: flex-start;
+  text-align: left;
+}
+
+header {
+  background-color: #fcdb00;
+  padding: 3rem 0;
+  position: static;
+}
+
+footer {
+  background-color: #010101;
+  padding: 3.8rem 0 17rem;
+}
+
+footer address {
+  font-size: 1rem;
+  color: #ececec;
+  font-weight: 300;
+}
+
+main .container {
+  padding: 0 5rem;
+}
+main h1 {
+  margin-top: 5rem;
+}
+
+main .img-content {
+  margin: 3.5rem 0 2.5rem;
+}
+
+main p {
+  hyphens: auto;
+}
+
+main .text-container {
+  padding-bottom: 10rem;
+}
+
+address a {
+  text-decoration: none;
+  color: #ececec;
+}
+
+.social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social i {
+  color: white;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 120%;
+  bottom: 0;
+  left: -10%;
+  background-color: #222222;
+  transform: scale(0);
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  animation: sliding-underline 1s 1 forwards;
+  transform-origin: left;
+}
+
+@keyframes sliding-underline {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .flex-header {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main .container {
+    padding: 0 2rem;
+  }
+
+  :root {
+    font-size: 20px;
+  }
+
+  .flex-footer {
+    flex-direction: column-reverse;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+  }
+}
