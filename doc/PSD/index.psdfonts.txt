@@ -1,0 +1,16 @@
+Copyright © Your Company 2014. All Rights Reserved
+OpenSans,14 pt,D2D2D2
+--
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+OpenSans,20 pt,6B6B6B
+--
+Portfolio
+OpenSans-Light,45 pt,6B6B6B
+--
+A Template by Your Company
+OpenSans,25 pt,FFFEFE
+--
+We Build Awesome Wireframe
+OpenSans-Light,65 pt,FFFFFF
+--
